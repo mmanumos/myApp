@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Productos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="container" style="margin-top: 30px;">
+    <button type="button" class="btn btn-success float-start">Nuevo</button>
+  </div>
+
+  <div class="container mt-5">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Descripcion</th>
+          <th scope="col">Stock</th>
+          <th scope="col">Valor Unitario</th>
+          <th scope="col">Departamento</th>
+          <th scope="col">Color</th>
+          <th scope="col">Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let producto of productosLista">
+          <th scope="row">{{producto.idProducto}}</th>
+          <td>{{producto.nombre}}</td>
+          <td>{{producto.descripcion}}</td>
+          <td>{{producto.cantidadStock}}</td>
+          <td>{{producto.valorUnitario}}</td>
+          <td>{{producto.dptoVentaNombre}}</td>
+          <td>{{producto.colorNombre}}</td>
+          <td><button type="button" class="btn btn-warning">Editar</button></td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+</ion-content>

@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Pedidos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="container" style="margin-top: 30px;">
+    <button type="button" class="btn btn-success float-start" (click)="newPedido()">Nuevo</button>
+  </div>
+
+  <div class="container mt-5">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Nro Cédula</th>
+          <th scope="col">Dirección</th>
+          <th scope="col">Fecha Registro</th>
+          <th scope="col">Valor Sin Descuento</th>
+          <th scope="col">Descuento Aplicado (%)</th>
+          <th scope="col">Valor con Descuento</th>
+          <th scope="col">Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pedido of pedidosLista">
+          <th scope="row">{{pedido.idPedido}}</th>
+          <td>{{pedido.nroDocumento}}</td>
+          <td>{{pedido.direccion}}</td>
+          <td>{{pedido.fechaRegistro}}</td>
+          <td>{{pedido.totalSinDescuento}}</td>
+          <td>{{pedido.descuento}}</td>
+          <td>{{pedido.total}}</td>
+          <td><button type="button" class="btn btn-warning">Editar</button></td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+</ion-content>

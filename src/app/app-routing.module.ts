@@ -3,13 +3,16 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'folder/Inbox',
-    pathMatch: 'full'
+    path: 'product',
+    loadChildren: () => import('./product/product.module').then( m => m.ProductPageModule)
   },
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+    path: 'pedido',
+    loadChildren: () => import('./pedido/pedido.module').then( m => m.PedidoPageModule)
+  },
+  {
+    path: 'form-pedido',
+    loadChildren: () => import('./pedido/form-pedido/form-pedido.module').then( m => m.FormPedidoPageModule)
   }
 ];
 
