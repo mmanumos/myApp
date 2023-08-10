@@ -1,4 +1,4 @@
-# myApp - Desarrollo de prueba para Algar (Frontend)
+# myApp - Desarrollo de prueba de la aplicación Belleza para Algar (Frontend)
 
 ## Ionic - Angular
 
