@@ -9,4 +9,6 @@
 - Ionic 7.1.1
 - Bootstrap 5
 
+  Nota: En la carpeta pantallazos, se encuentran imágenes de lo quese debe visualizar al ejecutar el proyecto
+
 
